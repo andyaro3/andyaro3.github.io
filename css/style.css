@@ -323,7 +323,7 @@ section {
       margin-left: 5%;
       font-family: "Roboto Condensed";
       width: 350px;
-      overflow: none;
+      overflow: hidden;
     }
 
 @media screen and (min-width: 700px) {
