@@ -53,10 +53,10 @@ $(".hamburger, .homepageHamburger").click(function() {
   };
 });
 
-//box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1);
+// box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1);
 $(".shopItem").hover(function() {
   $(this).find("a").toggleClass("shopItemToggled");
-    console.log("shopItem box-shadow, toggleClass");
+  console.log("shopItem box-shadow, toggleClass");
 });
 $(".shopItem a").click(function() {
   event.preventDefault();
@@ -73,16 +73,19 @@ $("nav ul li a").click(function(event) {
   hrefName = hrefFull.substr(hrefFull.indexOf("#") + 0);
   console.log(hrefName);
 
+  // hide all pages/divs
   $("#homepage").hide();
   $("#ourStory").hide();
   $("#menu").hide();
   $("#shop").hide();
   $("#contact").hide();
+
   // hide nav
   $("nav").animate({width: "0"}, 500);
   hamburgerToggle = 0;
-  //show page clicked
+
+  //show page/div clicked
   $(hrefName).fadeIn(2000);
-}); // end page toggle
+}); // end toggle page
 
 }); //close document.ready

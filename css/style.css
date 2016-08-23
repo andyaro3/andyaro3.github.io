@@ -32,49 +32,34 @@ Developer @GA in DC
 /* Clear fix hack */
 .clearfix:after {
      content: ".";
-     display: block;
      clear: both;
-     visibility: hidden;
-     line-height: 0;
+     display: block;
      height: 0;
+     line-height: 0;
+     visibility: hidden;    
 }
-/*
-.clear {
-  clear: both;
-}
-
-.alignright {
-  float: right;
-  padding: 0 0 10px 10px; /* note the padding around a right floated image 
-}
-
-.alignleft {
-  float: left;
-  padding: 0 10px 10px 0; /* note the padding around a left floated image 
-}*/
 
 /******************************************
-/* BASE STYLES
+/* STYLES
 /*******************************************/
 
 .blackBrownBand {
   background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
-  width: 100%;
+  border: none;
   height: 75px;
   margin: 0;
   padding: 0;
-  border: none;
+  width: 100%;
 }
 
 body {
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
   color: white;
   display: block;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  font-family: "Roboto", sans-serif;
-  /*added by Andy*/
   width: 100%;
-  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
 }
 
 ul {
@@ -83,27 +68,27 @@ ul {
 
 header {
   display: ;
-/*  position: absolute;
-  width: 100%;*/
 }
+
 #portfolioItem {
   display: none;
 }
+
 #portfolio {
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
   font-family: "Open Sans Condensed";
   font-size: 26px;
-  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
-  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  height: 75px;
-  width: 100px;
-  padding: 14px 5px 0 0;
-  text-align: center;
   font-style: italic;
+  height: 75px;
+  left: 10px;
+  padding: 14px 5px 0 0;
+  position: absolute;
+  text-align: center;
   text-decoration: none;
+  top: 0;
+  width: 100px;
+  z-index: 100;
 }
   @media screen and (min-width: 700px) {
     #portfolioItem {
@@ -112,33 +97,33 @@ header {
   }
 
 #codepen {
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
   font-family: "Open Sans Condensed";
   font-size: 26px;
-  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
-  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  right: 150px;
-  height: 75px;
-  width: 100px;
-  padding: 14px 5px 0 0;
-  text-align: center;
   font-style: italic;
+  height: 75px;
+  padding: 14px 5px 0 0;
+  position: absolute;
+  right: 150px;
+  text-align: center;
   text-decoration: none;
+  top: 0;
+  width: 100px;
+  z-index: 100;
 }
 
 .hamburger {
-  width: 50px;
-  height: 50px;
-  border: 3px solid white;
-  text-align: center;
-  border-radius: 5px;
-  position: fixed;
-  top: 11.5px;
-  right: 12.5px;
-  z-index: 10;
   background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 50px;
+  position: fixed;
+  right: 12.5px;
+  text-align: center;
+  top: 11.5px;
+  width: 50px;
+  z-index: 10;
 }
 
 .hamburger p { /* creating the 3 lines */
@@ -149,39 +134,38 @@ header {
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 0;
   opacity: .95;
-  /*box-shadow: -7px 7px 10px black;*/
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0;
 }
 
 nav li a {
-  display: block;
-  width: 251px;
-  height: 50px;
   background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
-  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
   border-bottom: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
   color: white;
+  display: block;
   font-family: "Arial";
   font-size: 20px;
+  height: 50px;
   line-height: 1.2;
   padding: 12.5px 0 0 25px;
   text-decoration: none;
+  width: 251px;
  }
 
 .firstNav {
-  display: block;
-  width: 251px;
-  height: 75px;
   background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
-  padding: 25px 0 0 115px;
   border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent dotted menu border white */
-  font-weight: thin;
-  font-style: italic;
   color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+  display: block;
+  font-style: italic;
+  font-weight: lighter;
+  height: 75px;
+  padding: 25px 0 0 115px;
+  width: 251px;
 }
 
 .lastNav {
@@ -191,8 +175,8 @@ nav li a {
 /* different pages, #id by section */
 section {
   position: absolute;
-  z-index: -1;
   width: 100%;
+  z-index: -1;
 }
 #homepage {
   display: none;
@@ -211,69 +195,69 @@ section {
 }
 
 .paralax {
-  width: 100%;
   height: 400px;
+  width: 100%;
 }
-  .paralax h2 {
-    font-size: 50px;
-    font-family: "Damion";
-    text-align: center;
-    padding-top: 100px;
+  @media screen and (min-width: 700px) {
+    .paralax {
+      height: 500px;
+    }
   }
-  .background1 {
-    background-image: url("../images/coffeeshop1_mobile.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+  @media screen and (min-width: 1000px) {
+    .paralax {
+      height: 600px;
+    }
   }
-  .background2 {
-    background-image: url("../images/coffeeshop2_mobile.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  .background3 {
-    background-image: url("../images/coffeeshop3_mobile.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  .background4 {
-    background-image: url("../images/coffeeshop4_mobile.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  .background5 {
-    background-image: url("../images/coffeeshop5_mobile.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+  @media screen and (min-width: 1300px) {
+    .paralax {
+      height: 700px;
+    }
   }
 
+.paralax h2 {
+  font-family: "Damion";
+  font-size: 50px;
+  padding-top: 100px;
+  text-align: center;
+}
 
-@media screen and (min-width: 700px) {
-  .paralax {
-    height: 500px;
-  }
+.background1 {
+  background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/coffeeshop1_mobile.jpg?raw=true"); /* url("../images/coffeeshop1_mobile.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-@media screen and (min-width: 1000px) {
-  .paralax {
-    height: 600px;
-  }
+.background2 {
+  background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/coffeeshop2_mobile.jpg?raw=true"); /* url("../images/coffeeshop2_mobile.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-@media screen and (min-width: 1300px) {
-  .paralax {
-    height: 700px;
-  }
+.background3 {
+  background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/coffeeshop3_mobile.jpg?raw=true"); /* url("../images/coffeeshop3_mobile.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background4 {
+  background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/coffeeshop4_mobile.jpg?raw=true"); /* url("../images/coffeeshop4_mobile.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background5 {
+  background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/coffeeshop5_mobile.jpg?raw=true"); /* url("../images/coffeeshop5_mobile.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .newPage {}
   .newPage h3 {
-    margin-left: 10%;
-    font-size: 50px;
-    font-family: "Damion";
     display: block;
+    font-family: "Damion";
+    font-size: 50px;
+    margin-left: 10%;
     width: 90%;
   }
   .newPage p {
@@ -287,22 +271,22 @@ section {
 
 .homepageContent {}
   .homepageContent img {
-    width: 200px;
-    height: auto;
+    display: none;
     float: right;
+    height: auto;
     margin-right: 10%;
     padding: 5px 0 20px 20px;
-    display: none;
+    width: 200px;
   }
   .homepageHamburger {
-    width: 50px;
-    height: 50px;
-    border: 3px solid white;
-    text-align: center;
-    border-radius: 5px;
     background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
-    margin-left: 10%;
+    border: 3px solid white;
+    border-radius: 5px;
     float: left;
+    height: 50px;
+    margin-left: 10%;
+    text-align: center;
+    width: 50px;
   }
   .homepageHamburger p { /* creating the 3 lines */
     font-family: "Arial";
@@ -311,29 +295,44 @@ section {
     margin-top: -9.5px;
   }
   .homepageFirstNav {
+    color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
     display: inline-block;
     float: left;
-    width: 50%;
+    font-style: italic;
+    font-weight: lighter;
     height: 25px;
     margin-left: 20px;
-    font-weight: thin;
-    font-style: italic;
-    color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+    width: 50%;
+  }
+
+  @media screen and (min-width: 700px) {
+    .homepageContent img {
+      display: block;
+    }
+    .homepageFirstNav {
+      margin-top: 10px;
+    }
   }
 
 .ourStoryContent {}
   .ourStoryContent img {
-    width: 200px;
-    height: auto;
-    float: left;
-    padding: 5px 20px 15px 0;
     display: none;
+    float: left;
+    height: auto;
+    padding: 5px 20px 15px 0;
+    width: 200px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .ourStoryContent img {
+      display: block;
+    }
   }
 
 .menuContent {}
   .menuMain {
-    margin-left: 10%;
     background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+    margin-left: 10%;
     width: 90%;
   }
   .menuh4 {
@@ -341,131 +340,124 @@ section {
     padding-bottom: .1px;
   }
   .menuGroup {
+    display: inline;
     float: left;
     padding-left: 0;
-    display: inline;
   }
+  .menuGroup li {
+    font-family: "Roboto Condensed";
+    margin-left: 5%;
+    overflow: hidden;
+    width: 350px;
+  }
+
+  @media screen and (min-width: 700px) {
+    .menuGroup:nth-Child(3) {
+      clear: both; /* clearfix float */
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .menuGroup li {
+      width: 425px;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .menuGroup {
+      /*margin-right: 1%;*/
+    }
+    .menuGroup:nth-Child(3) {
+      clear: none; /* undo clearfix float, allow float */
+    }
     .menuGroup li {
       margin-left: 5%;
-      font-family: "Roboto Condensed";
-      width: 350px;
-      overflow: hidden;
+      width: 275px;
     }
-
-@media screen and (min-width: 700px) {
-  .menuGroup:nth-Child(3) {
-    clear: both; /* clearfix float */
   }
-  .homepageContent img {
-    display: block;
-  }
-  .ourStoryContent img {
-    display: block;
-  }
-  .homepageFirstNav {
-    margin-top: 10px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .menuGroup li {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .menuGroup:nth-Child(3) {
-    clear: none; /* undo clearfix float, allow float */
-  }
-  .menuGroup li {
-    margin-left: 5%;
-    width: 275px;
-  }
-}
 
 .shopContent {}
   .shopCatalog {
     margin: 30px 7% 0 12%;
   }
   .shopItem {
-    display: block;
-    height: 195px;
-    width: 150px;
-    margin: 0 15px 15px 0;
     background-color: white;
+    display: block;
     float: left;
+    height: 195px;
+    margin: 0 15px 15px 0;
+    width: 150px;
   }
-    .shopItem a {
-      display: block;
-      position: absolute;
-      margin: 125px 0 0 0;
-      width: 150px;
-      height: 50px;
-      background-color: gold;
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-      color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
-      padding: 15px;
-    }
-    .shopItemToggled {
-      box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1); /* animate, coffee bean black-brown */
-    }
+  .shopItem a {
+    color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+    background-color: gold;
+    display: block;
+    font-weight: bold;
+    height: 50px;
+    margin: 125px 0 0 0;
+    padding: 15px;
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+  }
+  .shopItemToggled {
+    box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1); /* animate, coffee bean black-brown */
+  }
   .ccBeans1 {
-    background-image: url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1447753072467-2f56032d1d48_mobile.jpg?raw=true"); /* url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg"); */
     background-position: -100px -35px; /* -left/right -up/down */
-    background-size: 350%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 350%;
+    height: 100%;
+    width: 100%;
   }
   .ccBeans2 {
-    background-image: url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1447753072467-2f56032d1d48_mobile.jpg?raw=true"); /* url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg"); */
     background-position: -250px -35px; /* -left/right -up/down */
-    background-size: 350%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 350%;
+    height: 100%;
+    width: 100%;
   }
   .ccBeans3 {
-    background-image: url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1447753072467-2f56032d1d48_mobile.jpg?raw=true"); /* url("../images/photo-1447753072467-2f56032d1d48_mobile.jpg"); */
     background-position: -250px -200px; /* -left/right -up/down */
-    background-size: 350%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 350%;
+    height: 100%;
+    width: 100%;
   }
   .ccShirt {
-    background-image: url("../images/photo-1458044508387-6825c08a7870_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1458044508387-6825c08a7870_mobile.jpg?raw=true"); /* url("../images/photo-1458044508387-6825c08a7870_mobile.jpg"); */
     background-position: -110px -80px; /* -left/right -up/down */
-    background-size: 280%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 280%;
+    height: 100%;
+    width: 100%;
   }
   .ccSweatshirt {
-    background-image: url("../images/photo-1454391129723-a11d68a3a263_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1454391129723-a11d68a3a263_mobile.jpg?raw=true"); /* url("../images/photo-1454391129723-a11d68a3a263_mobile.jpg"); */
     background-position: -60px -20px; /* -left/right -up/down */
-    background-size: 170%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 170%;
+    height: 100%;
+    width: 100%;
   }
   .ccHat {
-    background-image: url("../images/photo-1446108440972-3798c860067c_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1446108440972-3798c860067c_mobile.jpg?raw=true"); /* url("../images/photo-1446108440972-3798c860067c_mobile.jpg"); */
     background-position: -140px -30px; /* -left/right -up/down */
-    background-size: 250%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 250%;
+    height: 100%;
+    width: 100%;
   }
   .ccMug {
-    background-image: url("../images/photo-1461914756888-80f9821f5d17_mobile.jpg");
+    background-image: url("https://github.com/andyaro3/andyaro3.github.io/blob/master/images/photo-1461914756888-80f9821f5d17_mobile.jpg?raw=true"); /* url("../images/photo-1461914756888-80f9821f5d17_mobile.jpg"); */
     background-position: -80px -30px; /* -left/right -up/down */
-    background-size: 200%;
-    width: 100%;
-    height: 100%;
     background-repeat: no-repeat;
+    background-size: 200%;
+    height: 100%;
+    width: 100%;
   }
-
 
 .contactContent {}
   .contactGroup {
@@ -473,21 +465,21 @@ section {
     width: 80%;
   }
   .contactContent li {
-    margin-left: 5%;
     font-family: "Roboto Condensed";
-    width: 350px;
+    margin-left: 5%;
     overflow: hidden;
+    width: 350px;
   }
   .contactContent a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
   }
 
 .foot {
-  width: 100%;
   height: 200px;
   padding-top: 60px;
   text-align: center;
+  width: 100%;
 }
   .foot h4 {
     font-family: "Damion";
