@@ -444,7 +444,7 @@ section {
     margin-left: 5%;
     font-family: "Roboto Condensed";
     width: 350px;
-    overflow: none;
+    overflow: hidden;
   }
   .contactContent a {
     text-decoration: none;
