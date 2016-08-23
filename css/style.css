@@ -1,0 +1,470 @@
+/*
+Project Name: Sample Business Site, Central Café
+Client: FEWD25, Final Project
+Author: Andy Aronoff
+Developer @GA in DC
+*/
+
+/******************************************
+/* Colors
+/*******************************************
+/*  hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+/*  hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+/*  hsla(360, 100%, 100%, 0.7); /* transparent white */
+/*  hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+
+/******************************************
+/* @Media Queries
+/*******************************************
+/*  @media screen and (min-width: 700px) {}
+/*  @media screen and (min-width: 1000px) {}
+/*  @media screen and (min-width: 1300px) {}
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+/*
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image 
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image 
+}*/
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.blackBrownBand {
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  color: white;
+  display: block;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  /*added by Andy*/
+  width: 100%;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: ;
+/*  position: absolute;
+  width: 100%;*/
+}
+
+#codepen {
+  font-family: "Open Sans Condensed";
+  font-size: 26px;
+  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 150px;
+  height: 75px;
+  width: 100px;
+  padding: 14px 5px 0 0;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  top: 11.5px;
+  right: 12.5px;
+  z-index: 10;
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+}
+
+.hamburger p { /* creating the 3 lines */
+  font-family: "Arial";
+  font-size: 38px;
+  line-height: .25;
+  margin-top: -9.5px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  opacity: .95;
+  /*box-shadow: -7px 7px 10px black;*/
+}
+
+nav li a {
+  display: block;
+  width: 251px;
+  height: 50px;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  border-bottom: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
+  color: white;
+  font-family: "Arial";
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 12.5px 0 0 25px;
+  text-decoration: none;
+ }
+
+.firstNav {
+  display: block;
+  width: 251px;
+  height: 75px;
+  background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+  padding: 25px 0 0 115px;
+  border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent dotted menu border white */
+  font-weight: thin;
+  font-style: italic;
+  color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+}
+
+.lastNav {
+  border-radius: 0 0 0 10px; /* top-left, top-right, bottom-right, bottom-left */
+}
+
+/* different pages, #id by section */
+section {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+#homepage {
+  display: none;
+}
+#ourStory {
+  display: none;
+}
+#menu {
+  display: none;
+}
+#shop {
+  display: none;
+}
+#contact {
+  display: none;
+}
+
+.paralax {
+  width: 100%;
+  height: 400px;
+}
+  .paralax h2 {
+    font-size: 50px;
+    font-family: "Damion";
+    text-align: center;
+    padding-top: 100px;
+  }
+  .background1 {
+    background-image: url("https://hd.unsplash.com/photo-1470985166016-a7d53763cee7");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background2 {
+    background-image: url("https://hd.unsplash.com/photo-1432107294469-414527cb5c65");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background3 {
+    background-image: url("https://hd.unsplash.com/photo-1468418143278-41595b1a4c89");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background4 {
+    background-image: url("https://hd.unsplash.com/photo-1441757801704-6a71cffed732");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .background5 {
+    background-image: url("https://hd.unsplash.com/photo-1461963040894-7ee721035376");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+
+@media screen and (min-width: 700px) {
+  .paralax {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .paralax {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .paralax {
+    height: 700px;
+  }
+}
+
+.newPage {}
+  .newPage h3 {
+    margin-left: 10%;
+    font-size: 50px;
+    font-family: "Damion";
+    display: block;
+    width: 90%;
+  }
+  .newPage p {
+    margin: 0 10%;
+  }
+  .newPage h4 {
+    color: gold;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+.homepageContent {}
+  .homepageContent img {
+    width: 200px;
+    height: auto;
+    float: right;
+    margin-right: 10%;
+    padding: 5px 0 20px 20px;
+  }
+  .homepageHamburger {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 5px;
+    background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+    margin-left: 10%;
+    float: left;
+  }
+  .homepageHamburger p { /* creating the 3 lines */
+    font-family: "Arial";
+    font-size: 38px;
+    line-height: .25;
+    margin-top: -9.5px;
+  }
+  .homepageFirstNav {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 25px;
+    margin-left: 20px;
+    font-weight: thin;
+    font-style: italic;
+    color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
+  }
+
+.ourStoryContent {}
+  .ourStoryContent img {
+    width: 200px;
+    height: auto;
+    float: left;
+    padding: 5px 20px 15px 0;
+  }
+
+.menuContent {}
+  .menuMain {
+    margin-left: 10%;
+    background-color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+    width: 90%;
+  }
+  .menuh4 {
+    font-size: 1.1rem;
+    padding-bottom: .1px;
+  }
+  .menuGroup {
+    float: left;
+    padding-left: 0;
+    display: inline;
+  }
+    .menuGroup li {
+      margin-left: 5%;
+      font-family: "Roboto Condensed";
+      width: 350px;
+      overflow: none;
+    }
+
+@media screen and (min-width: 700px) {
+  .menuGroup:nth-Child(3) {
+    clear: both; /* clearfix float */
+  }
+  .homepageFirstNav {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menuGroup li {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .menuGroup:nth-Child(3) {
+    clear: none; /* undo clearfix float, allow float */
+  }
+  .menuGroup li {
+    margin-left: 5%;
+    width: 275px;
+  }
+}
+
+.shopContent {}
+  .shopCatalog {
+    margin: 30px 7% 0 12%;
+  }
+  .shopItem {
+    display: block;
+    height: 195px;
+    width: 150px;
+    margin: 0 15px 15px 0;
+    background-color: white;
+    float: left;
+  }
+    .shopItem a {
+      display: block;
+      position: absolute;
+      margin: 125px 0 0 0;
+      width: 150px;
+      height: 50px;
+      background-color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      color: hsla(11, 100%, 4%, 1); /* coffee bean black-brown */
+      padding: 15px;
+    }
+    .shopItemToggled {
+      box-shadow: inset 0 0 20px hsla(11, 100%, 4%, 1); /* animate, coffee bean black-brown */
+    }
+  .ccBeans1 {
+    background-image: url("../images/shop/photo-1447753072467-2f56032d1d48.jpg");
+    background-position: -100px -35px; /* -left/right -up/down */
+    background-size: 350%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccBeans2 {
+    background-image: url("../images/shop/photo-1447753072467-2f56032d1d48.jpg");
+    background-position: -250px -35px; /* -left/right -up/down */
+    background-size: 350%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccBeans3 {
+    background-image: url("../images/shop/photo-1447753072467-2f56032d1d48.jpg");
+    background-position: -250px -200px; /* -left/right -up/down */
+    background-size: 350%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccShirt {
+    background-image: url("../images/shop/photo-1458044508387-6825c08a7870.jpg");
+    background-position: -110px -80px; /* -left/right -up/down */
+    background-size: 280%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccSweatshirt {
+    background-image: url("../images/shop/photo-1454391129723-a11d68a3a263.jpg");
+    background-position: -60px -20px; /* -left/right -up/down */
+    background-size: 170%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccHat {
+    background-image: url("../images/shop/photo-1446108440972-3798c860067c.jpg");
+    background-position: -140px -30px; /* -left/right -up/down */
+    background-size: 250%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  .ccMug {
+    background-image: url("../images/shop/photo-1461914756888-80f9821f5d17.jpg");
+    background-position: -80px -30px; /* -left/right -up/down */
+    background-size: 200%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+
+.contactContent {}
+  .contactGroup {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .contactContent li {
+    margin-left: 5%;
+    font-family: "Roboto Condensed";
+    width: 350px;
+    overflow: none;
+  }
+  .contactContent a {
+    text-decoration: none;
+    color: white;
+  }
+
+.foot {
+  width: 100%;
+  height: 200px;
+  padding-top: 60px;
+  text-align: center;
+}
+  .foot h4 {
+    font-family: "Damion";
+    font-size: 22px;
+  }
+  .foot img {
+    margin: 20px 20px 20px 20px;
+  }
+  .foot p {
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+  }
