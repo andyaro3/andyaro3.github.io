@@ -26,17 +26,19 @@ Developer @GA in DC
 
 /* Box Model Hack */
 * {
-     box-sizing: border-box;
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     clear: both;
-     display: block;
-     height: 0;
-     line-height: 0;
-     visibility: hidden;    
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
 }
 
 /******************************************
