@@ -86,6 +86,30 @@ header {
 /*  position: absolute;
   width: 100%;*/
 }
+#portfolioItem {
+  display: none;
+}
+#portfolio {
+  font-family: "Open Sans Condensed";
+  font-size: 26px;
+  color: hsla(360, 100%, 100%, 0.7); /* transparent white */
+  background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 75px;
+  width: 100px;
+  padding: 14px 5px 0 0;
+  text-align: center;
+  font-style: italic;
+  text-decoration: none;
+}
+  @media screen and (min-width: 700px) {
+    #portfolioItem {
+      display: block;
+    }
+  }
 
 #codepen {
   font-family: "Open Sans Condensed";

@@ -10,6 +10,14 @@ $(document).ready(function() {
 $("#homepage").fadeIn(3000);
 console.log("page fade in");
 
+// Portfolio hover color change using ANIMATE method with plug-in script on index.html
+$("#portfolioItem").hover(function() {
+  $("#portfolio").animate({backgroundColor:"hsla(360, 100%, 100%, 0.33)"}, "slow");
+    }, function() {
+      $("#portfolio").animate({backgroundColor:"hsla(360, 100%, 100%, 0);"}, "slow");
+        console.log("hovered Portfolio");
+});
+
 // Codepen hover color change using ANIMATE method with plug-in script on index.html
 $("#codeItem").hover(function() {
   $("#codepen").animate({backgroundColor:"hsla(360, 100%, 100%, 0.33)"}, "slow");
