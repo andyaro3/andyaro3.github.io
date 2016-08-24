@@ -343,19 +343,25 @@ section {
   }
   .menuGroup {
     display: inline;
-    float: left;
+    /*float: left;*/
     padding-left: 0;
   }
   .menuGroup li {
     font-family: "Roboto Condensed";
     margin-left: 5%;
     overflow: hidden;
-    width: 350px;
+    width: 90%;
   }
 
   @media screen and (min-width: 700px) {
     .menuGroup:nth-Child(3) {
       clear: both; /* clearfix float */
+    }
+    .menuGroup li {
+      width: 350px;
+    }
+    .menuGroup {
+      float: left;
     }
   }
   @media screen and (min-width: 1000px) {
